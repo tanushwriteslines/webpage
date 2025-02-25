@@ -1,0 +1,250 @@
+:root{
+  --textcolor:#1a1c20;
+  --linkcolor:#eeca4a;
+  --background-color:white;
+
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  scroll-behavior: smooth;
+}
+body{
+  font-family: 'Poppins',sans-serif;
+  background-color: var(--background-color);
+}
+
+a{
+  color: var(--linkcolor);
+  text-decoration: none;
+}
+
+/* navbar */
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  height: 80px;
+  border-bottom: 1px solid rgb(99, 94, 94);
+}
+nav .left a{
+  color: var(--textcolor);
+  font-size: 22px;
+  font-weight: 700;
+}
+
+nav .right a{
+  color: var(--textcolor);
+  margin: 0 10px ;
+}
+nav .right a:last-child{
+  color: white;
+  background-color: #1a1c20;
+  padding: 5px 15px;
+  border-radius: 5px;
+}
+nav .right a span{
+  margin-left: 5px;
+}
+/* main section */
+.mainsection{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  margin: 50px 0;
+  margin-bottom: 100px;
+  gap: 40px;
+  
+  
+}
+.mainsection .text{
+  flex: 5;
+}
+.mainsection .text h2{
+  font-size: 45px;
+}
+.mainsection .text .links{
+  margin-top: 25px;
+}
+.mainsection .text .links a{
+  display: inline-block;
+  padding: 5px 10px;
+  border: 2px solid var(--linkcolor);
+  border-radius: 5px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  transition: 0.1s;
+  
+}
+.mainsection .text .links a:hover{
+  color: var(--textcolor);
+  border: 1px solid var(--textcolor);
+  transition: 0.3s ease;
+  
+  
+}
+
+.mainsection .headshot{
+  display: flex;
+  flex: 2;
+  justify-content: right;
+}
+.mainsection .headshot img{
+  width: 300px;
+    border-radius: 10%;
+    object-fit: cover;
+    
+}
+
+/* section Skills */
+.skillsection{
+  padding: 0 50px;
+  margin-bottom: 100px;
+}
+.skillsection h2{
+  text-align: center;
+  font-size: 35px;
+}
+.skillsection .text{
+  text-align: center;
+  margin-bottom: 20px;
+}
+.skillsection .cells{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.skillsection .cells .cell{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  width: 200px;
+  padding: 10px 20px;
+  margin: 10px;
+  border: 1.5px solid #d3d3d3;
+  border-radius: 5px;
+
+}
+.skillsection .cells .cell img{
+  width: 30px;
+  height: 30px;
+  object-fit: contain ;
+  border-radius: 2px;
+ 
+
+}
+.skillsection .cells .cell span{
+ font-size: 18px;
+
+}
+.skillsection .cells .cell img:hover{
+  transform: scale(1.1);
+  transition: 0.5s ease;
+}
+
+.testimonysection{
+      padding: 0 50 px;
+      margin-bottom: 100px;
+}
+.testimonysection h2{
+  font-size: 35px;
+  margin-bottom: 30px;
+  margin-left: 20px;
+}
+.testimonysection .group{
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+.testimonysection .group .persondetail{
+  text-align: center;
+  flex: 2;
+}
+.testimonysection .group .text{
+      flex: 8;
+      font-weight: 400;
+}
+.testimonysection .group .persondetail img{
+  width: 250px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  
+}
+.testimonysection .group .persondetail p{
+  font-weight: 600;
+  margin-left: 20px;
+ 
+}
+.testimonysection .group .persondetail p:last-child{
+ font-weight: normal;
+}
+
+
+/* navbarr */
+@media(max-width:850px){
+    /* main section */
+    .mainsection .text h2{
+      font-size: 35px;
+    }
+}
+@media(max-width:740px){
+  /* main section */
+ .mainsection{
+  flex-direction:column-reverse;
+ }
+ .mainsection .headshot img{
+  width: 300px;
+ }
+
+ /* testimony section */
+ .testimonysection{
+  text-align: center;
+ }
+ .testimonysection .group{
+  flex-direction: column;
+ }
+}
+@media(max-width:600px){
+  nav{
+    padding: 0 20px;
+  }
+
+  nav .right a{
+    font-size: 23px;
+  }
+
+  nav .right a:last-child{
+    color: var(--textcolor);
+    background-color: transparent;
+  }
+
+  nav .right a span{
+    display: none;
+  }
+
+  /* section 1 main */
+  .mainsection{
+    padding: 0 20px;
+  }
+  .mainsection .text h2{
+    font-size: 30px;
+  }
+  /* Skills section */
+  .skillsection{
+    padding: 0 20px;
+  }
+  .skillsection .cells .cell span{
+    font-size: 16px;
+  }
+}
